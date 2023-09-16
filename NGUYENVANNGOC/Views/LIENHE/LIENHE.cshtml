@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "LIENHE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-5 border rounded-3 shadow-lg p-4">
+            <h2 class="fw-bold text-center mb-4">THÔNG TIN HỌC VIÊN</h2>
+            <form action="LIENHE" method="post">
+                <div class="mb-3">
+                    <label for="hoten" class="form-label fw-bolder">Họ tên</label>
+                    <input type="text" class="form-control text-center" id="hoten" name="hoten" value="Nguyễn Văn Ngọc" aria-describedby="text" readonly text-align: center;">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label fw-bolder">Ngày sinh</label>
+                    <input type="text" class="form-control text-center " id=" date" name="date" value="16/09/1993" aria-describedby="text" readonly text-align: center;">
+                </div>
+                <div class="mb-4">
+                    <label for="diachi" class="form-label fw-bolder">Email</label>
+                    <input type="text" class="form-control text-center" id="daichi" name="diachi" value="ngocqn93@gmail.com" aria-describedby="text" readonly text-align: center;">
+                </div>
+                <div class="mb-5">
+                    <label for="sdt" class="form-label fw-bolder">Số điện thoại</label>
+                    <input type="text" class="form-control text-center" id="sdt" name="sdt" value="0906913901" aria-describedby="text" readonly text-align: center;">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
