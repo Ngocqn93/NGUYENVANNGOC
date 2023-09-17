@@ -58,11 +58,6 @@
             <hr />
             @if (Model != null)
             {
-                @*double tongCong = 0;
-            foreach (var item in Model)
-            {
-            tongCong += item.TamTinh;
-            }*@
                 <div class="d-flex flex-column text-end"> 
                     <p class="fw-bold float-end px-3" id="Tongtamtinh">Tổng tạm tính : @Model.Sum(c => c.TamTinh).ToString("N0") đồng</p>
                 </div>
@@ -96,16 +91,19 @@
                 </div>
                 <div class="mb-4">
                     <label for="soluong" class="form-label fw-bolder">Số lượng</label>
-                    <input type="number" class="form-control" id="soluong" name="soluong" value="" aria-describedby="text">
+                    <input type="number" class="form-control" id="soluong" name="soluong" value="" aria-describedby="text" min="1" >
+                    <div id="soluong-error" style="color: red; display: none;"> </div>
                 </div>
                 <div class="mb-5">
                     <label for="dongia" class="form-label fw-bolder">Đơn giá bán</label>
-                    <input type="number" class="form-control" id="dongia" name="dongia" value="" aria-describedby="text">
+                    <input type="number" class="form-control" id="dongia" name="dongia" value="" aria-describedby="text" min="0">
+                    <div id="error-message" style="color: red; display: none;"> </div>
+                    
                 </div>
                 <div class="mb-5">
                     <label for="giamgia" class="form-label fw-bolder">Giảm giá(%)</label>
                     <input type="number" class="form-control" id="giamgia" name="giamgia" value="" aria-describedby="text" min="0" max="100">
-                    <div id="error-message" style="color: red; display: none;">Giá trị phải là một số từ 0 đến 100.</div>
+                    <div id="error-message" style="color: red; display: none;"> </div>
                 </div>
                 <hr />
                 <div class="d-flex align-items-center justify-content-center my-5 gap-5">

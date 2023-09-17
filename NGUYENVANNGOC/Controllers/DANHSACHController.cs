@@ -9,7 +9,7 @@ namespace NGUYENVANNGOC.Controllers
        
         public IActionResult DANHSACH(bool? check = false)
         {
-            if ((bool)check)
+            if (check.HasValue && check.Value)
             {
                 products.Clear();
             }
@@ -31,7 +31,7 @@ namespace NGUYENVANNGOC.Controllers
         public IActionResult RemoveProduct(int position)
         {
             products.RemoveAt(position - 1);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("DANHSACH", "Home");
         }
     }
 }
